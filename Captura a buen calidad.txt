@@ -1,0 +1,29 @@
+Inspeccionas web, le das al 2º icono de arriba a la izquierda, amplias las dimensiones y ajustas el cuadrado con algo así 
+
+<div id="customMosaic" class="inline-flex flex-col items-center align-top pt-0" style="
+                width:2070px; height: 1050;
+                background:rgb(10,22,51);
+                transition:3s;
+		transform: scale(1.5);
+    		transform-origin: top left;">
+
+Luego le das a los tres puntos de arriba a la derecha, haces capturas y recortas.
+
+OPCION 2: 
+
+<div id="customMosaic" class="inline-flex flex-col items-center align-top pt-0" style="
+                width:1370px; height: 1950;
+                background:rgb(10,22,51);
+                transition:3s;
+                transform: scale(2);
+                transform-origin: top left;">
+
+MOVILES: 
+
+<div id="customMosaic" class="inline-flex flex-col items-center align-top pt-0" style="
+                width:500px; height: 2350;
+                background:rgb(10,22,51);
+                transition:3s;
+                transform: scale(2);
+                transform-origin: top left;">
+            
