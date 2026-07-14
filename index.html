@@ -516,7 +516,8 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                         </div>
                 
                 <div>
-                    <div style="height: 1px; width: 2072px;"></div></div><div class="w-full overflow-x-auto">
+                    <div style="height: 1px; width: 2072px;"></div></div>
+                    <div class="w-full overflow-x-auto">
             
                     <div id="customMosaic" class="flex flex-col pt-0 w-full"
                         style="
@@ -794,10 +795,20 @@ actualizarContadores();
 const customMosaic = document.getElementById("customMosaic");
 
 function ajustarAnchoMosaico() {
-    customMosaic.style.width =
-        window.matchMedia("(max-width: 768px)").matches
-            ? "538px"
-            : "100%";
+    const anchoBase = 538;
+    const anchoPantalla = window.innerWidth;
+
+    // Siempre ocupa el ancho del contenedor
+    customMosaic.style.width = "100%";
+
+    if (anchoPantalla <= anchoBase) {
+        const escala = anchoPantalla / anchoBase;
+
+        customMosaic.style.transform = `scale(${escala})`;
+        customMosaic.style.transformOrigin = "top left";
+    } else {
+        customMosaic.style.transform = "";
+    }
 }
 
 ajustarAnchoMosaico();
