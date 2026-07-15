@@ -519,12 +519,22 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 @media (max-width:750px){
 
     #filtros{
-        flex-direction:column;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        gap:8px;
+        flex-wrap:nowrap; /* <-- importante */
+    }
+
+    #grupoTipo,
+    #grupoMedio{
+        display:inline-flex;
+        flex-shrink:0;
     }
 
     #filtros button{
-        padding-left:10px;
-        padding-right:10px;
+        padding:0 8px;
     }
 
     #filtros button span{
@@ -534,7 +544,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     #filtros button svg{
         margin:0;
     }
-
 }
 
         </style><script src="./next/static/chunks/e3f38668c3bfe7e3.js"></script><script src="./next/static/chunks/57f5e7a5ff60694b.js"></script><script src="./next/static/chunks/658824699b3a95db.js"></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js"></script><script src="./next/static/chunks/e71298d710c650f8.js"></script><script src="./next/static/chunks/575da2acea0996e7.js"></script><script src="./next/static/chunks/c4afd40cfa192c1e.js"></script><meta charset="utf-8"><meta id="viewport-meta" name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="light dark"><title>Trophy Mosaics · adricollantex</title><meta name="description" content="Create and download mosaic images of your PlayStation platinum psn trophies. Enter your PSN ID to visualize, customize, and share your achievements."><meta name="author" content="PSN PlatHub"><meta name="keywords" content="PlayStation trophies,platinum psn trophy,PSN,trophy mosaic,PS5,PS4,PS Vita,PS3,gaming achievements"><meta name="creator" content="PSN PlatHub"><meta name="publisher" content="PSN PlatHub"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"><meta name="category" content="Gaming"><link rel="canonical" href="https://psnplathub.com"><meta property="og:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta property="og:description" content="Generate a beautiful mosaic of your PlayStation platinum psn trophies. No login required."><meta property="og:url" content="https://psnplathub.com"><meta property="og:site_name" content="PSN PlatHub"><meta property="og:image" content="https://psnplathub.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="PSN PlatHub preview image"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta name="twitter:description" content="Create a shareable mosaic of your platinum psn trophies. No login required."><meta name="twitter:image" content="https://psnplathub.com/og.png"><link rel="icon" href="./media/favicon.ico?favicon.f416b654.ico" sizes="256x256" type="image/x-icon"><link rel="icon" href="./media/favicon.ico"><link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png"><link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"><meta name="next-size-adjust" content=""><script src="./next/static/chunks/e3f38668c3bfe7e3.js" async=""></script><script src="./next/static/chunks/57f5e7a5ff60694b.js" async=""></script><script src="./next/static/chunks/658824699b3a95db.js" async=""></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js" async=""></script><script src="./next/static/chunks/e71298d710c650f8.js" async=""></script><script src="./next/static/chunks/575da2acea0996e7.js" async=""></script><script src="./next/static/chunks/c4afd40cfa192c1e.js" async=""></script></head><body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased min-h-svh flex flex-col"><div hidden=""></div><script>((a,b,c,d,e,f,g,h)=>{let i=document.documentElement,j=["light","dark"];function k(b){var c;(Array.isArray(a)?a:[a]).forEach(a=>{let c="class"===a,d=c&&f?e.map(a=>f[a]||a):e;c?(i.classList.remove(...d),i.classList.add(f&&f[b]?f[b]:b)):i.setAttribute(a,b)}),c=b,h&&j.includes(c)&&(i.style.colorScheme=c)}if(d)k(d);else try{let a=localStorage.getItem(b)||c,d=g&&"system"===a?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":a;k(d)}catch(a){}})("class","theme","system",null,["light","dark"],null,true,true)</script><main class="flex-1 min-h-0 flex flex-col"><!--$--><!--/$--><div class="flex flex-col flex-1"><div data-slot="sidebar-wrapper" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar w-full flex-1 min-h-0 flex" style="--sidebar-width: 18rem; --sidebar-width-icon: 3rem;">
@@ -561,7 +570,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                         </div>
                 
                 <div>
-                    <div style="height: 1px; width: 2072px;"></div></div>
+                    </div>
                     <div id="mosaicWrapper" class="w-full flex justify-center overflow-hidden">
             
                     <div id="customMosaic" class="flex flex-col pt-0"
@@ -859,14 +868,20 @@ const botones = document.querySelectorAll("#filtros button");
 function ajustarFiltros() {
 
     if (window.innerWidth <= 750) {
-        filtros.style.flexDirection = "column";
 
-        botones.forEach(btn=>{
-            const texto = btn.childNodes[btn.childNodes.length-1];
-            if(texto.nodeType===3){
-                texto.textContent="";
-            }
-        });
+    filtros.style.flexDirection = "row";
+    filtros.style.flexWrap = "wrap";
+    filtros.style.justifyContent = "center";
+
+    document.getElementById("grupoTipo").style.display = "inline-flex";
+    document.getElementById("grupoMedio").style.display = "inline-flex";
+
+    botones.forEach(btn=>{
+        const texto = btn.querySelector("span");
+        if(texto){
+            texto.style.display = "none";
+        }
+    });
 
     } else {
         location.reload(); // o restaurar el texto manualmente
