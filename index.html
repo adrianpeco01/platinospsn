@@ -491,6 +491,11 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     background-color: rgb(209,209,212) !important;
 }
 
+.filtro-activo img{
+    color: rgb(24,24,27);
+    opacity: 0.8;
+}
+
 .dragging{
     opacity:.5;
 }
@@ -528,7 +533,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     gap:16px;
 }
 
-@media (max-width:1300px){
+@media (max-width:1380px){
 
     #filtros{
         display:flex;
@@ -570,13 +575,31 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     filter: none;
 }
 
+.numero,
 .fecha,
-.fechaplat,
-.porcentaje,
-.porcentajeplat,
-.duracionplat,
-.duracion{
+.duracion,
+.porcentaje{
     display:none;
+}
+
+.fechaplat,
+.duracionplat,
+.porcentajeplat{
+    display:none !important;
+}
+
+.ps-logo{
+    transition: transform .18s ease, opacity .18s ease;
+}
+
+.ps-logo.saliendo{
+    transform: scale(.4) rotate(-180deg);
+    opacity: 0;
+}
+
+.ps-logo.entrando{
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0;
 }
 
         </style><script src="./next/static/chunks/e3f38668c3bfe7e3.js"></script><script src="./next/static/chunks/57f5e7a5ff60694b.js"></script><script src="./next/static/chunks/658824699b3a95db.js"></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js"></script><script src="./next/static/chunks/e71298d710c650f8.js"></script><script src="./next/static/chunks/575da2acea0996e7.js"></script><script src="./next/static/chunks/c4afd40cfa192c1e.js"></script><meta charset="utf-8"><meta id="viewport-meta" name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="light dark"><title>Trophy Mosaics · adricollantex</title><meta name="description" content="Create and download mosaic images of your PlayStation platinum psn trophies. Enter your PSN ID to visualize, customize, and share your achievements."><meta name="author" content="PSN PlatHub"><meta name="keywords" content="PlayStation trophies,platinum psn trophy,PSN,trophy mosaic,PS5,PS4,PS Vita,PS3,gaming achievements"><meta name="creator" content="PSN PlatHub"><meta name="publisher" content="PSN PlatHub"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"><meta name="category" content="Gaming"><link rel="canonical" href="https://psnplathub.com"><meta property="og:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta property="og:description" content="Generate a beautiful mosaic of your PlayStation platinum psn trophies. No login required."><meta property="og:url" content="https://psnplathub.com"><meta property="og:site_name" content="PSN PlatHub"><meta property="og:image" content="https://psnplathub.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="PSN PlatHub preview image"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta name="twitter:description" content="Create a shareable mosaic of your platinum psn trophies. No login required."><meta name="twitter:image" content="https://psnplathub.com/og.png"><link rel="icon" href="./media/favicon.ico?favicon.f416b654.ico" sizes="256x256" type="image/x-icon"><link rel="icon" href="./media/favicon.ico"><link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png"><link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"><meta name="next-size-adjust" content=""><script src="./next/static/chunks/e3f38668c3bfe7e3.js" async=""></script><script src="./next/static/chunks/57f5e7a5ff60694b.js" async=""></script><script src="./next/static/chunks/658824699b3a95db.js" async=""></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js" async=""></script><script src="./next/static/chunks/e71298d710c650f8.js" async=""></script><script src="./next/static/chunks/575da2acea0996e7.js" async=""></script><script src="./next/static/chunks/c4afd40cfa192c1e.js" async=""></script></head><body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased min-h-svh flex flex-col"><div hidden=""></div><script>((a,b,c,d,e,f,g,h)=>{let i=document.documentElement,j=["light","dark"];function k(b){var c;(Array.isArray(a)?a:[a]).forEach(a=>{let c="class"===a,d=c&&f?e.map(a=>f[a]||a):e;c?(i.classList.remove(...d),i.classList.add(f&&f[b]?f[b]:b)):i.setAttribute(a,b)}),c=b,h&&j.includes(c)&&(i.style.colorScheme=c)}if(d)k(d);else try{let a=localStorage.getItem(b)||c,d=g&&"system"===a?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":a;k(d)}catch(a){}})("class","theme","system",null,["light","dark"],null,true,true)</script><main class="flex-1 min-h-0 flex flex-col"><!--$--><!--/$--><div class="flex flex-col flex-1"><div data-slot="sidebar-wrapper" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar w-full flex-1 min-h-0 flex" style="--sidebar-width: 18rem; --sidebar-width-icon: 3rem;">
@@ -602,11 +625,11 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 
                                 <div id="grupoAtributo" class="inline-flex p-1 bg-muted rounded-lg border border-border">
                                 <button id="Plataforma" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all
-                                hover:bg-accent hover:text-accent-foreground rounded-md px-3 gap-2 h-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid3x3 lucide-grid-3x3 w-4 h-4" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path><path d="M9 3v18"></path><path d="M15 3v18"></path></svg><span>Plataforma</span></button>
-                                <button id="Número" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-4 h-4" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg><span>Número</span></button>
-                                <button id="Fecha" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-4 h-4" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg><span>Fecha</span></button>
-                                <button id="Duracion" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-4 h-4" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg><span>Duración</span></button>
-                                <button id="Porcentaje" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-4 h-4" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg><span>Porcentaje</span></button></div>
+                                hover:bg-accent hover:text-accent-foreground rounded-md px-3 gap-2 h-8"><img src="./media/plataforma.svg"alt="Plataforma" class="w-4 h-4 ps-logo"><span>Plataforma</span></button>
+                                <button id="Número" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/numero.svg"alt="Numero" class="w-2 h-2 ps-logo"><span>Número</span></button>
+                                <button id="Fecha" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/fecha.svg"alt="Fecha" class="w-4 h-4 ps-logo"><span>Fecha</span></button>
+                                <button id="Duracion" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/duracion.svg"alt="Duración" class="w-4 h-4 ps-logo"><span>Duración</span></button>
+                                <button id="Porcentaje" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/porcentaje.svg"alt="Porcentaje" class="w-4 h-4 ps-logo"><span>Porcentaje</span></button></div>
 
 
                             </div>
@@ -804,7 +827,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 <div class="game game100 steam flex flex-col items-center text-center" style="width: var(--icon-size); gap: 4px;"><div class="overflow-hidden" style="width: 104px; height: 104px; background-color: transparent; border-style: none; border-radius: 0px;"><img alt="HITM3" loading="lazy" width="104" height="104" decoding="async" data-nimg="1" class="object-contain " src="./media/HITM3.jpg" style="color: transparent;"></div><p class="" title="HITM3" style="color: rgb(255, 255, 255); font-weight: bold; font-size: 0.75rem; line-height: 1.1; width: var(--icon-size); word-break: break-word;">HITM3</p>
                     <span class="text-muted-foreground plataforma" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">Steam</span>
                     <span class="text-muted-foreground numero" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;"></span>
-                    <span class="text-muted-foreground fecha" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">13-04-2026 15:06</span>
+                    <span class="text-muted-foreground fecha" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">13-05-2026 15:06</span>
                     <span class="text-muted-foreground duracion" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">3h</span>
                     <span class="text-muted-foreground porcentaje" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">8.33%</span></div>
                 <div class="game platinum psn flex flex-col items-center text-center" style="width: var(--icon-size); gap: 4px;"><div class="overflow-hidden" style="width: 104px; height: 104px; background-color: transparent; border-style: none; border-radius: 0px;"><img alt="It Takes Two" loading="lazy" width="104" height="104" decoding="async" data-nimg="1" class="object-contain " src="https://image.api.playstation.com/trophy/np/NPWR20783_00_00ABCCED328035CD3A5F97C330B0048280CFD60A01/7EDDBC5CA5F8DCFB01C862B4471BA78E076706A4.PNG" style="color: transparent;"></div><p class="" title="It Takes Two" style="color: rgb(255, 255, 255); font-weight: bold; font-size: 0.75rem; line-height: 1.1; width: var(--icon-size); word-break: break-word;">It Takes Two</p>
@@ -1217,7 +1240,43 @@ activarMedio(btnTodoMEDIO);
 
 let filtroTipo="todo";
 let filtroMedio="todo";
+
+// =======================
+// ATRIBUTOS
+// =======================
+
 let atributoActual = "plataforma";
+let atributosFijados = [];
+
+const botonesAtributo = {
+    plataforma: document.getElementById("Plataforma"),
+    numero: document.getElementById("Número"),
+    fecha: document.getElementById("Fecha"),
+    duracion: document.getElementById("Duracion"),
+    porcentaje: document.getElementById("Porcentaje")
+};
+
+const iconosOriginales = {
+    plataforma: "./media/plataforma.svg",
+    numero: "./media/numero.svg",
+    fecha: "./media/fecha.svg",
+    duracion: "./media/duracion.svg",
+    porcentaje: "./media/porcentaje.svg"
+};
+
+const btnPlataforma = botonesAtributo.plataforma;
+const btnNumero = botonesAtributo.numero;
+const btnFecha = botonesAtributo.fecha;
+const btnDuracion = botonesAtributo.duracion;
+const btnPorcentaje = botonesAtributo.porcentaje;
+
+const ordenSpans = [
+    "plataforma",
+    "numero",
+    "fecha",
+    "duracion",
+    "porcentaje"
+];
 
 function aplicarFiltros(){
 
@@ -1240,23 +1299,8 @@ function aplicarFiltros(){
 
     });
 
-        switch (atributoActual){
-    case "plataforma":
-        mostrarPlataforma();
-        break;
-    case "numero":
-        mostrarNumero();
-        break;
-    case "fecha":
-        mostrarFecha();
-        break;
-    case "duracion":
-        mostrarDuracion();
-        break;
-    case "porcentaje":
-        mostrarPorcentaje();
-        break;
-}
+        actualizarDatos();
+pintarAtributos();
 
 
 }
@@ -1314,171 +1358,275 @@ btnRA.onclick=()=>{
     actualizarContadores();
 };
 
-const btnPlataforma = document.getElementById("Plataforma");
-const btnNumero = document.getElementById("Número");
-const btnFecha = document.getElementById("Fecha");
-const btnPorcentaje = document.getElementById("Porcentaje");
-const btnDuracion = document.getElementById("Duracion");
-
-function activarAtributo(btn){
-    [btnPlataforma, btnNumero, btnFecha, btnPorcentaje, btnDuracion]
-        .forEach(b => b.classList.remove("filtro-activo"));
-
-    btn.classList.add("filtro-activo");
-}
-
-activarAtributo(btnPlataforma);
 
 function parseFecha(texto){
-    const [fecha,hora] = texto.split(" ");
-    const [d,m,a] = fecha.split("-").map(Number);
-    const [hh,mm] = hora.split(":").map(Number);
+
+    const [fecha,hora]=texto.split(" ");
+
+    const[d,m,a]=fecha.split("-").map(Number);
+
+    const[hh,mm]=hora.split(":").map(Number);
+
     return new Date(a,m-1,d,hh,mm);
-}
-
-function mostrarPlataforma(){
-
-    document.querySelectorAll(".game").forEach(game=>{
-
-        const span = game.querySelector(".plataforma");
-        span.textContent = span.dataset.original;
-
-    });
 
 }
 
-function mostrarFecha(){
+function formatearFecha(texto){
 
     const meses=[
         "ene","feb","mar","abr","may","jun",
         "jul","ago","sep","oct","nov","dic"
     ];
 
-    document.querySelectorAll(".game").forEach(game=>{
+    const fecha=parseFecha(texto);
 
-        let fechaTexto;
-
-        if (filtroTipo === "platinum") {
-            fechaTexto = game.querySelector(".fechaplat")?.textContent
-                      || game.querySelector(".fecha").textContent;
-        } else {
-            fechaTexto = game.querySelector(".fecha").textContent;
-        }
-
-        const d = parseFecha(fechaTexto);
-
-        game.querySelector(".plataforma").textContent =
-            `${d.getDate()} ${meses[d.getMonth()]} ${String(d.getFullYear()).slice(-2)}`;
-
-    });
+    return `${fecha.getDate()} ${meses[fecha.getMonth()]} ${String(fecha.getFullYear()).slice(-2)}`;
 
 }
 
-function mostrarPorcentaje(){
 
-    document.querySelectorAll(".game").forEach(game=>{
+function pintarBotones(){
 
-        let texto;
+    Object.values(botonesAtributo).forEach(btn=>{
 
-        if (filtroTipo === "platinum") {
-            texto = game.querySelector(".porcentajeplat")?.textContent
-                 || game.querySelector(".porcentaje").textContent;
-        } else {
-            texto = game.querySelector(".porcentaje").textContent;
-        }
-
-        game.querySelector(".plataforma").textContent = texto;
+        btn.classList.remove("filtro-activo");
 
     });
 
-}
+    atributosFijados.forEach(nombre=>{
 
-function mostrarDuracion(){
-
-    document.querySelectorAll(".game").forEach(game=>{
-
-        let texto;
-
-        if (filtroTipo === "platinum") {
-            texto = game.querySelector(".duracionplat")?.textContent
-                 || game.querySelector(".duracion").textContent;
-        } else {
-            texto = game.querySelector(".duracion").textContent;
-        }
-
-        game.querySelector(".plataforma").textContent = texto;
+        botonesAtributo[nombre].classList.add("filtro-activo");
 
     });
 
+    botonesAtributo[atributoActual].classList.add("filtro-activo");
+
 }
 
-function mostrarNumero(){
+function pintarAtributos(){
 
-    const visibles = [...document.querySelectorAll(".game")]
-        .filter(game => game.style.display !== "none")
-        .filter(game => {
-            const fecha = (filtroTipo === "platinum")
-                ? (game.querySelector(".fechaplat")?.textContent || game.querySelector(".fecha")?.textContent)
-                : game.querySelector(".fecha")?.textContent;
+    const visibles = [...atributosFijados];
 
-            return fecha?.trim();
+    if(!visibles.includes(atributoActual))
+        visibles.push(atributoActual);
+
+    document.querySelectorAll(".game").forEach(game=>{
+
+        game.querySelector(".plataforma").style.display="none";
+        game.querySelector(".numero").style.display="none";
+        game.querySelector(".fecha").style.display="none";
+        game.querySelector(".duracion").style.display="none";
+        game.querySelector(".porcentaje").style.display="none";
+
+        visibles.forEach(nombre=>{
+
+            switch(nombre){
+
+                case "plataforma":
+                    game.querySelector(".plataforma").style.display="block";
+                    break;
+
+                case "numero":
+                    game.querySelector(".numero").style.display="block";
+                    break;
+
+                case "fecha":
+                    game.querySelector(".fecha").style.display="block";
+                    break;
+
+                case "duracion":
+                    game.querySelector(".duracion").style.display="block";
+                    break;
+
+                case "porcentaje":
+                    game.querySelector(".porcentaje").style.display="block";
+                    break;
+
+            }
+
         });
 
-    visibles.sort((a,b) => {
+    });
 
-        const fechaA = (filtroTipo === "platinum")
-            ? (a.querySelector(".fechaplat")?.textContent || a.querySelector(".fecha").textContent)
-            : a.querySelector(".fecha").textContent;
+    actualizarNumeros();
+}
 
-        const fechaB = (filtroTipo === "platinum")
-            ? (b.querySelector(".fechaplat")?.textContent || b.querySelector(".fecha").textContent)
-            : b.querySelector(".fecha").textContent;
+function actualizarNumeros(){
 
-        return parseFecha(fechaA) - parseFecha(fechaB);
+    if(
+        !atributosFijados.includes("numero") &&
+        atributoActual!="numero"
+    ){
+        return;
+    }
+
+    const visibles = [...document.querySelectorAll(".game")]
+        .filter(game => game.style.display != "none")
+        .sort((a,b)=>{
+
+            const textoA =
+                (filtroTipo==="platinum" && a.querySelector(".fechaplat"))
+                    ? a.querySelector(".fechaplat").textContent
+                    : a.querySelector(".fecha").dataset.original;
+
+            const textoB =
+                (filtroTipo==="platinum" && b.querySelector(".fechaplat"))
+                    ? b.querySelector(".fechaplat").textContent
+                    : b.querySelector(".fecha").dataset.original;
+
+            return parseFecha(textoA) - parseFecha(textoB);
+
+        });
+
+    visibles.forEach((game,i)=>{
+
+        game.querySelector(".numero").textContent = "#" + (i+1);
 
     });
 
-    visibles.forEach((game,i)=>{
-        game.querySelector(".plataforma").textContent = "#" + (i+1);
+}
+
+function pulsarAtributo(nombre){
+
+    if(atributoActual===nombre){
+
+        if(atributosFijados.includes(nombre)){
+
+            atributosFijados=[];
+
+            atributoActual=nombre;
+
+        }else{
+
+            atributosFijados.push(nombre);
+
+        }
+
+    }else{
+
+        atributoActual=nombre;
+
+    }
+
+    pintarBotones();
+    pintarAtributos();
+    actualizarIconos();
+
+}
+
+function actualizarDatos(){
+
+    document.querySelectorAll(".game").forEach(game=>{
+
+        // FECHA
+        if(filtroTipo=="platinum" && game.querySelector(".fechaplat")){
+
+            game.querySelector(".fecha").textContent =
+                formatearFecha(game.querySelector(".fechaplat").textContent);
+
+        }else{
+
+            game.querySelector(".fecha").textContent =
+                formatearFecha(game.querySelector(".fecha").dataset.original);
+
+        }
+
+        // DURACIÓN
+        if(filtroTipo=="platinum" && game.querySelector(".duracionplat")){
+
+            game.querySelector(".duracion").textContent =
+                game.querySelector(".duracionplat").textContent;
+
+        }else{
+
+            game.querySelector(".duracion").textContent =
+                game.querySelector(".duracion").dataset.original;
+
+        }
+
+        // PORCENTAJE
+        if(filtroTipo=="platinum" && game.querySelector(".porcentajeplat")){
+
+            game.querySelector(".porcentaje").textContent =
+                game.querySelector(".porcentajeplat").textContent;
+
+        }else{
+
+            game.querySelector(".porcentaje").textContent =
+                game.querySelector(".porcentaje").dataset.original;
+
+        }
+
+    });
+
+}
+
+function actualizarIconos(){
+
+    Object.entries(botonesAtributo).forEach(([nombre,btn])=>{
+
+        const img = btn.querySelector("img");
+
+        const nuevoIcono = atributosFijados.includes(nombre)
+            ? "./media/candado.svg"
+            : iconosOriginales[nombre];
+
+        // Si ya tiene ese icono no hacemos nada
+        if(img.src.endsWith(nuevoIcono.replace("./","")))
+            return;
+
+        img.classList.add("saliendo");
+
+        img.addEventListener("transitionend", function salir(){
+
+            img.removeEventListener("transitionend", salir);
+
+            img.src = nuevoIcono;
+
+            img.classList.remove("saliendo");
+            img.classList.add("entrando");
+
+            requestAnimationFrame(()=>{
+                requestAnimationFrame(()=>{
+                    img.classList.remove("entrando");
+                });
+            });
+
+        }, { once:true });
+
     });
 
 }
 
 document.querySelectorAll(".plataforma").forEach(span=>{
+
     span.dataset.original=span.textContent;
+
 });
 
-btnPlataforma.onclick = () => {
-    activarAtributo(btnPlataforma);
-    atributoActual = "plataforma";
-    mostrarPlataforma();
-};
+document.querySelectorAll(".game").forEach(game=>{
 
-btnNumero.onclick = () => {
-    activarAtributo(btnNumero);
-    atributoActual = "numero";
-    mostrarNumero();
-};
+    game.querySelector(".fecha").dataset.original =
+        game.querySelector(".fecha").textContent;
 
-btnFecha.onclick = () => {
-    activarAtributo(btnFecha);
-    atributoActual = "fecha";
-    mostrarFecha();
-};
+    game.querySelector(".duracion").dataset.original =
+        game.querySelector(".duracion").textContent;
 
-btnPorcentaje.onclick = () => {
-    activarAtributo(btnPorcentaje);
-    atributoActual = "porcentaje";
-    mostrarPorcentaje();
-};
+    game.querySelector(".porcentaje").dataset.original =
+        game.querySelector(".porcentaje").textContent;
 
-btnDuracion.onclick = () => {
-    activarAtributo(btnDuracion);
-    atributoActual = "duracion";
-    mostrarDuracion();
-};
+});
 
-mostrarPlataforma();
+btnPlataforma.onclick=()=>pulsarAtributo("plataforma");
+btnNumero.onclick=()=>pulsarAtributo("numero");
+btnFecha.onclick=()=>pulsarAtributo("fecha");
+btnDuracion.onclick=()=>pulsarAtributo("duracion");
+btnPorcentaje.onclick=()=>pulsarAtributo("porcentaje");
+
+actualizarDatos();
+pintarBotones();
+pintarAtributos();
+actualizarIconos();
 aplicarFiltros();
 actualizarContadores();
 
@@ -1505,9 +1653,9 @@ function actualizarContadores() {
     ).length;
 
     document.querySelector("#TOTALPLAT span").textContent = totalPlatinosPSN;
-document.querySelector("#TOTALPSN span").textContent = totalPSN;
-document.querySelector("#TOTALSTEAM span").textContent = totalSteam;
-document.querySelector("#TOTALRA span").textContent = totalRA;
+    document.querySelector("#TOTALPSN span").textContent = totalPSN;
+    document.querySelector("#TOTALSTEAM span").textContent = totalSteam;
+    document.querySelector("#TOTALRA span").textContent = totalRA;
 
 const cajaPlat = document.getElementById("TOTALPLAT");
 const cajaPSN = document.getElementById("TOTALPSN");
