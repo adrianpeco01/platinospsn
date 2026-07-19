@@ -464,7 +464,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 #TOTALPSN img,
 #TOTALSTEAM img,
 #TOTALRA img {
-    opacity: .80;
+    opacity: .90;
 }
 
 #Todo:not(.filtro-activo):hover,
@@ -478,7 +478,11 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 #Número:not(.filtro-activo):hover,
 #Fecha:not(.filtro-activo):hover,
 #Duracion:not(.filtro-activo):hover,
-#Porcentaje:not(.filtro-activo):hover {
+#Porcentaje:not(.filtro-activo):hover,
+#AZ:not(.filtro-activo):hover,
+#Nuevo:not(.filtro-activo):hover,
+#Tiempo:not(.filtro-activo):hover,
+#Raros:not(.filtro-activo):hover{
     background-color: rgba(209,209,212,.2) !important;
 }
 
@@ -517,6 +521,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 #customMosaic{
     width:540px;
     transform-origin: top center;
+        padding-bottom: 15px; /* o 20px */
 }
 
 @media (min-width:541px){
@@ -533,7 +538,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     gap:16px;
 }
 
-@media (max-width:1380px){
+@media (max-width:2600px){
 
     #filtros{
         display:flex;
@@ -555,9 +560,11 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         padding:0 8px;
     }
 
-    #filtros button span{
-        display:none;
-    }
+    #grupoTipo button span,
+#grupoMedio button span,
+#grupoAtributo button span{
+    display:none;
+}
 
     #filtros button svg,
     #filtros button img{
@@ -602,6 +609,63 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     opacity: 0;
 }
 
+#grupoBusqueda{
+    width: 170px;
+    height: 42px;
+}
+
+#grupoBusqueda input{
+    width: 100%;
+    color:white;
+}
+
+#grupoBusqueda input::placeholder{
+    color:rgb(161 161 170);
+}
+
+#grupoBusqueda:focus-within{
+    border-color:rgb(113 113 122);
+    box-shadow:0 0 0 2px rgba(255,255,255,.05);
+}
+
+#grupoBusqueda svg{
+    opacity:.7;
+}
+
+#grupoOrden{
+    width: 390px;      /* el ancho que prefieras */
+    display: flex;
+}
+
+#AZ{
+    flex: 0.7;
+}
+
+#Tiempo{
+    flex: 0.8;
+}
+
+#Nuevo,
+#Raros{
+    flex: 1;
+}
+
+#grupoOrden span,
+#grupoOrden img{
+    display:inline-block;
+    transition:opacity .18s ease, transform .18s ease;
+}
+
+#grupoOrden .saliendo{
+    opacity:0;
+    transform:scale(.92);
+}
+
+#grupoOrden .entrando{
+    opacity:0;
+    transform:scale(1.08);
+}
+
         </style><script src="./next/static/chunks/e3f38668c3bfe7e3.js"></script><script src="./next/static/chunks/57f5e7a5ff60694b.js"></script><script src="./next/static/chunks/658824699b3a95db.js"></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js"></script><script src="./next/static/chunks/e71298d710c650f8.js"></script><script src="./next/static/chunks/575da2acea0996e7.js"></script><script src="./next/static/chunks/c4afd40cfa192c1e.js"></script><meta charset="utf-8"><meta id="viewport-meta" name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="light dark"><title>Trophy Mosaics · adricollantex</title><meta name="description" content="Create and download mosaic images of your PlayStation platinum psn trophies. Enter your PSN ID to visualize, customize, and share your achievements."><meta name="author" content="PSN PlatHub"><meta name="keywords" content="PlayStation trophies,platinum psn trophy,PSN,trophy mosaic,PS5,PS4,PS Vita,PS3,gaming achievements"><meta name="creator" content="PSN PlatHub"><meta name="publisher" content="PSN PlatHub"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"><meta name="category" content="Gaming"><link rel="canonical" href="https://psnplathub.com"><meta property="og:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta property="og:description" content="Generate a beautiful mosaic of your PlayStation platinum psn trophies. No login required."><meta property="og:url" content="https://psnplathub.com"><meta property="og:site_name" content="PSN PlatHub"><meta property="og:image" content="https://psnplathub.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="PSN PlatHub preview image"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta name="twitter:description" content="Create a shareable mosaic of your platinum psn trophies. No login required."><meta name="twitter:image" content="https://psnplathub.com/og.png"><link rel="icon" href="./media/favicon.ico?favicon.f416b654.ico" sizes="256x256" type="image/x-icon"><link rel="icon" href="./media/favicon.ico"><link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png"><link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"><meta name="next-size-adjust" content=""><script src="./next/static/chunks/e3f38668c3bfe7e3.js" async=""></script><script src="./next/static/chunks/57f5e7a5ff60694b.js" async=""></script><script src="./next/static/chunks/658824699b3a95db.js" async=""></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js" async=""></script><script src="./next/static/chunks/e71298d710c650f8.js" async=""></script><script src="./next/static/chunks/575da2acea0996e7.js" async=""></script><script src="./next/static/chunks/c4afd40cfa192c1e.js" async=""></script></head><body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased min-h-svh flex flex-col"><div hidden=""></div><script>((a,b,c,d,e,f,g,h)=>{let i=document.documentElement,j=["light","dark"];function k(b){var c;(Array.isArray(a)?a:[a]).forEach(a=>{let c="class"===a,d=c&&f?e.map(a=>f[a]||a):e;c?(i.classList.remove(...d),i.classList.add(f&&f[b]?f[b]:b)):i.setAttribute(a,b)}),c=b,h&&j.includes(c)&&(i.style.colorScheme=c)}if(d)k(d);else try{let a=localStorage.getItem(b)||c,d=g&&"system"===a?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":a;k(d)}catch(a){}})("class","theme","system",null,["light","dark"],null,true,true)</script><main class="flex-1 min-h-0 flex flex-col"><!--$--><!--/$--><div class="flex flex-col flex-1"><div data-slot="sidebar-wrapper" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar w-full flex-1 min-h-0 flex" style="--sidebar-width: 18rem; --sidebar-width-icon: 3rem;">
             
                     
@@ -609,12 +673,40 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                         
                         <div class="flex flex-col items-center w-full mb-6">
                             <div id="filtros" class="flex items-center gap-4">
+
+                            <div id="grupoBusqueda" class="inline-flex items-center p-1 bg-muted rounded-lg border border-border">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-4 h-4 ml-3 opacity-70 shrink-0"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="m21 21-4.3-4.3"/>
+                                </svg>
+
+                                <input
+                                    id="buscadorJuegos"
+                                    type="text"
+                                    placeholder="Buscar..."
+                                    class="bg-transparent outline-none px-3 py-1 text-sm placeholder:text-zinc-500"
+                                >
+
+                            </div>
+
+                                <div id="grupoOrden" class="inline-flex p-1 bg-muted rounded-lg border border-border">
+                                <button id="AZ" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all
+                                hover:bg-accent hover:text-accent-foreground rounded-md px-3 gap-2 h-8"><img src="./media/AZ.svg"alt="AZ" class="w-4 h-4 ps-logo"><span>A-Z</span></button>
+                                <button id="Nuevo" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/New.svg"alt="Nuevo" class="w-2 h-2 ps-logo"><span>Recientes</span></button>
+                                <button id="Tiempo" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/tiempo.svg"alt="Tiempo" class="w-4 h-4 ps-logo"><span>Largos</span></button>
+                                <button id="Raros" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/raro.svg"alt="Raros" class="w-4 h-4 ps-logo"><span>Raros</span></button></div>
+
                                 <div id="grupoTipo" class="inline-flex p-1 bg-muted rounded-lg border border-border">
                                 <button id="Todo" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all
                                 hover:bg-accent hover:text-accent-foreground rounded-md px-3 gap-2 h-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid3x3 lucide-grid-3x3 w-4 h-4" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path><path d="M9 3v18"></path><path d="M15 3v18"></path></svg><span>Todo</span></button>
-                                <button id="togglePlatinumBtn" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/platinum2.svg" alt="Platinum" class="w-4 h-4 ps-logo"><span>Platinos</span></button>
+                                <button id="togglePlatinumBtn" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/platinum3.svg" alt="Platinum" class="w-4 h-4 ps-logo"><span>Platinos</span></button>
                                 <button id="btn100" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/limitado.svg" alt="Platinum" class="w-4 h-4 ps-logo"><span>Limitados</span></button></div>
-
 
                                 <div id="grupoMedio" class="inline-flex p-1 bg-muted rounded-lg border border-border">
                                 <button id="TodoMEDIO" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all
@@ -1182,7 +1274,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                     <span class="text-muted-foreground fecha" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">27-10-2025 16:18</span>
                     <span class="text-muted-foreground duracion" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">6h</span>
                     <span class="text-muted-foreground porcentaje" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">3.83%</span></div>
-                <div class="game platinum steam flex flex-col items-center text-center" style="width: var(--icon-size); gap: 4px;"><div class="overflow-hidden" style="width: 104px; height: 104px; background-color: transparent; border-style: none; border-radius: 0px;"><img alt="Zuma's Revenge" loading="lazy" width="104" height="104" decoding="async" data-nimg="1" class="ra-badge object-contain " src="./media/Zumarevenge.jpg" style="color: transparent;"></div><p class="" title="Zuma's Revenge" style="color: rgb(255, 255, 255); font-weight: bold; font-size: 0.75rem; line-height: 1.1; width: var(--icon-size); word-break: break-word;">Zuma's Revenge</p>
+                <div class="game platinum steam flex flex-col items-center text-center" style="width: var(--icon-size); gap: 4px;"><div class="overflow-hidden" style="width: 104px; height: 104px; background-color: transparent; border-style: none; border-radius: 0px;"><img alt="Zuma's Revenge" loading="lazy" width="104" height="104" decoding="async" data-nimg="1" class="object-contain " src="./media/Zumarevenge2.jpg" style="color: transparent;"></div><p class="" title="Zuma's Revenge" style="color: rgb(255, 255, 255); font-weight: bold; font-size: 0.75rem; line-height: 1.1; width: var(--icon-size); word-break: break-word;">Zuma's Revenge</p>
                     <span class="text-muted-foreground plataforma" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">Steam</span>
                     <span class="text-muted-foreground numero" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;"></span>
                     <span class="text-muted-foreground fecha" style="color: rgb(107, 114, 128); font-weight: normal; font-size: 0.7rem; line-height: 1.1;">19-04-2026 19:30</span>
@@ -1204,6 +1296,16 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 <script>
 
 const grid = document.querySelector("#customMosaic .w-full.px-4.pb-4");
+
+// Elimina la fila vacía si existe
+const primeraFila = grid.querySelector(".flex.items-center.justify-end.w-full");
+if (primeraFila) {
+    primeraFila.remove();
+}
+
+grid.style.gridTemplateColumns =
+    "repeat(auto-fill, minmax(var(--icon-size), 1fr))";
+
 
 new Sortable(grid, {
     animation: 150,
@@ -1238,8 +1340,19 @@ function activarMedio(btn){
 activarTipo(btnTodo);
 activarMedio(btnTodoMEDIO);
 
+let ordenActual = "az";
+let ordenInverso = false;
+
+const btnAZ = document.getElementById("AZ");
+const btnNuevo = document.getElementById("Nuevo");
+const btnTiempo = document.getElementById("Tiempo");
+const btnRaros = document.getElementById("Raros");
+
 let filtroTipo="todo";
 let filtroMedio="todo";
+let textoBusqueda = "";
+
+const buscador = document.getElementById("buscadorJuegos");
 
 // =======================
 // ATRIBUTOS
@@ -1295,14 +1408,16 @@ function aplicarFiltros(){
         if(filtroMedio!=="todo" && !game.classList.contains(filtroMedio))
             mostrar=false;
 
+        if(mostrar && !coincideBusqueda(game))
+        mostrar = false;
+
         game.style.display=mostrar?"":"none";
 
     });
 
         actualizarDatos();
-pintarAtributos();
-
-
+        pintarAtributos();
+        ordenarMosaico();
 }
 
 btnTodo.onclick=()=>{
@@ -1384,6 +1499,331 @@ function formatearFecha(texto){
 
 }
 
+function parseDuracion(texto){
+
+    texto = texto.toLowerCase();
+
+    if(texto.includes("h"))
+        return parseFloat(texto) * 60;
+
+    return parseFloat(texto);
+}
+
+function parsePorcentaje(texto){
+
+    return parseFloat(texto.replace("%","").replace(",","."));
+
+}
+
+function normalizar(texto){
+
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"");
+
+}
+
+function obtenerFecha(game){
+
+    if(filtroTipo==="platinum" && game.querySelector(".fechaplat"))
+        return parseFecha(game.querySelector(".fechaplat").textContent);
+
+    return parseFecha(game.querySelector(".fecha").dataset.original);
+
+}
+
+function obtenerDuracion(game){
+
+    if(filtroTipo==="platinum" && game.querySelector(".duracionplat"))
+        return parseDuracion(game.querySelector(".duracionplat").textContent);
+
+    return parseDuracion(game.querySelector(".duracion").dataset.original);
+
+}
+
+function obtenerPorcentaje(game){
+
+    if(filtroTipo==="platinum" && game.querySelector(".porcentajeplat"))
+        return parsePorcentaje(game.querySelector(".porcentajeplat").textContent);
+
+    return parsePorcentaje(game.querySelector(".porcentaje").dataset.original);
+
+}
+
+function ordenarMosaico(){
+
+    const contenedor = grid;
+
+    const juegos = [...contenedor.querySelectorAll(".game")];
+
+    juegos.sort((a,b)=>{
+
+        let resultado=0;
+
+        switch(ordenActual){
+
+            case "az":
+
+                resultado=
+                    a.querySelector("p").textContent.localeCompare(
+                        b.querySelector("p").textContent,
+                        "es",
+                        {numeric:true}
+                    );
+
+                break;
+
+            case "nuevo":
+
+                resultado=
+                    obtenerFecha(b)-obtenerFecha(a);
+
+                break;
+
+            case "tiempo":
+
+                resultado=
+                    obtenerDuracion(b)-obtenerDuracion(a);
+
+                if(resultado===0){
+
+                    resultado=
+                        obtenerPorcentaje(a)-obtenerPorcentaje(b);
+
+                }
+
+                break;
+
+            case "raros":
+
+                resultado=
+                    obtenerPorcentaje(a)-obtenerPorcentaje(b);
+
+                break;
+
+        }
+
+        return ordenInverso ? -resultado : resultado;
+
+    });
+
+    juegos.forEach(j=>contenedor.appendChild(j));
+
+    actualizarNumeros();
+
+}
+
+function coincideBusqueda(game){
+
+    if(!textoBusqueda)
+        return true;
+
+    const titulo = normalizar(
+        game.querySelector("p").textContent
+    );
+
+    const consultas = textoBusqueda
+    .split(/\s*\+\s*/)
+    .map(t => t.trim())
+    .filter(Boolean);
+
+    return consultas.some(q => {
+
+    // ====================
+    // ENTRE PARÉNTESIS
+    // ====================
+
+    if(q.startsWith("(") && q.endsWith(")")){
+
+        const bruto = q.slice(1,-1).trim();
+
+        // ---- Duración ----
+
+        if(bruto.includes("h")){
+
+            const valor = obtenerDuracion(game);
+
+            if(bruto.startsWith("-"))
+                return valor <= parseDuracion(bruto.slice(1));
+
+            if(bruto.endsWith("-"))
+                return valor >= parseDuracion(bruto.slice(0,-1));
+
+            if(bruto.includes("-")){
+                const [a,b]=bruto.split("-");
+                return valor>=parseDuracion(a)
+                    && valor<=parseDuracion(b);
+            }
+
+            return valor===parseDuracion(bruto);
+        }
+
+        // ---- Porcentaje ----
+
+        if(bruto.includes("%")){
+
+            const valor = obtenerPorcentaje(game);
+
+            if(bruto.startsWith("-"))
+                return valor<=parsePorcentaje(bruto.slice(1));
+
+            if(bruto.endsWith("-"))
+                return valor>=parsePorcentaje(bruto.slice(0,-1));
+
+            if(bruto.includes("-")){
+                const [a,b]=bruto.split("-");
+                return valor>=parsePorcentaje(a)
+                    && valor<=parsePorcentaje(b);
+            }
+
+            return valor===parsePorcentaje(bruto);
+        }
+
+        // ---- Plataforma / fecha / etc ----
+
+        let texto = game.querySelector(".plataforma").dataset.original;
+
+        texto += " ";
+
+        texto += filtroTipo==="platinum" && game.querySelector(".fechaplat")
+            ? game.querySelector(".fechaplat").textContent
+            : game.querySelector(".fecha").dataset.original;
+
+        texto += " ";
+
+        texto += filtroTipo==="platinum" && game.querySelector(".duracionplat")
+            ? game.querySelector(".duracionplat").textContent
+            : game.querySelector(".duracion").dataset.original;
+
+        texto += " ";
+
+        texto += filtroTipo==="platinum" && game.querySelector(".porcentajeplat")
+            ? game.querySelector(".porcentajeplat").textContent
+            : game.querySelector(".porcentaje").dataset.original;
+
+        return normalizar(texto).includes(normalizar(bruto));
+    }
+
+    // ====================
+    // TÍTULO
+    // ====================
+
+// Entre comillas -> nombre exacto
+if(q.startsWith('"') && q.endsWith('"')){
+
+    const exacto = normalizar(q.slice(1,-1));
+
+    return titulo === exacto;
+}
+
+// Sin comillas -> contiene el texto
+return titulo.includes(normalizar(q));
+
+});
+
+}
+
+function activarOrden(boton){
+
+    [btnAZ,btnNuevo,btnTiempo,btnRaros]
+        .forEach(b=>b.classList.remove("filtro-activo"));
+
+    boton.classList.add("filtro-activo");
+
+}
+
+function cambiarOrden(tipo){
+
+    if(ordenActual===tipo){
+
+        ordenInverso=!ordenInverso;
+
+    }else{
+
+        ordenActual=tipo;
+        ordenInverso=false;
+
+    }
+
+    cambiarTextoAnimado(
+    btnAZ.querySelector("span"),
+    ordenInverso && ordenActual==="az" ? "Z-A" : "A-Z"
+    );
+
+    cambiarTextoAnimado(
+    btnNuevo.querySelector("span"),
+    ordenInverso && ordenActual==="nuevo" ? "Antiguos" : "Recientes"
+    );
+
+    cambiarTextoAnimado(
+    btnTiempo.querySelector("span"),
+    ordenInverso && ordenActual==="tiempo" ? "Cortos" : "Largos"
+    );
+
+    cambiarTextoAnimado(
+    btnRaros.querySelector("span"),
+    ordenInverso && ordenActual==="raros" ? "Comunes" : "Raros"
+    );
+
+    activarOrden({
+        az:btnAZ,
+        nuevo:btnNuevo,
+        tiempo:btnTiempo,
+        raros:btnRaros
+    }[tipo]);
+
+    ordenarMosaico();
+
+}
+
+function cambiarAnimado(elemento, callback){
+
+    elemento.classList.add("saliendo");
+
+    elemento.addEventListener("transitionend", function salir(){
+
+        elemento.removeEventListener("transitionend", salir);
+
+        callback();
+
+        elemento.classList.remove("saliendo");
+        elemento.classList.add("entrando");
+
+        requestAnimationFrame(()=>{
+            requestAnimationFrame(()=>{
+                elemento.classList.remove("entrando");
+            });
+        });
+
+    }, {once:true});
+
+}
+
+function cambiarTextoAnimado(span, nuevoTexto){
+
+    if(span.textContent === nuevoTexto) return;
+
+    span.classList.add("saliendo");
+
+    span.addEventListener("transitionend", function salir(){
+
+        span.removeEventListener("transitionend", salir);
+
+        span.textContent = nuevoTexto;
+
+        span.classList.remove("saliendo");
+        span.classList.add("entrando");
+
+        requestAnimationFrame(()=>{
+            requestAnimationFrame(()=>{
+                span.classList.remove("entrando");
+            });
+        });
+
+    }, { once:true });
+
+}
 
 function pintarBotones(){
 
@@ -1623,12 +2063,27 @@ btnFecha.onclick=()=>pulsarAtributo("fecha");
 btnDuracion.onclick=()=>pulsarAtributo("duracion");
 btnPorcentaje.onclick=()=>pulsarAtributo("porcentaje");
 
+btnAZ.onclick=()=>cambiarOrden("az");
+btnNuevo.onclick=()=>cambiarOrden("nuevo");
+btnTiempo.onclick=()=>cambiarOrden("tiempo");
+btnRaros.onclick=()=>cambiarOrden("raros");
+
+buscador.addEventListener("input", () => {
+    textoBusqueda = buscador.value.trim();
+    aplicarFiltros();
+    actualizarContadores();
+});
+
+activarOrden(btnAZ);
+
 actualizarDatos();
 pintarBotones();
 pintarAtributos();
 actualizarIconos();
 aplicarFiltros();
 actualizarContadores();
+
+ordenarMosaico();
 
 
 function actualizarContadores() {
@@ -1703,18 +2158,24 @@ function ajustarFiltros() {
     document.getElementById("grupoTipo").style.display = "inline-flex";
     document.getElementById("grupoMedio").style.display = "inline-flex";
 
-    botones.forEach(btn=>{
-        const texto = btn.querySelector("span");
-        if(texto){
-            texto.style.display = "none";
-        }
-    });
+    botones.forEach(btn => {
+
+    // No ocultar los textos de los botones de orden
+    if (btn.closest("#grupoOrden")) return;
+
+    const texto = btn.querySelector("span");
+    if (texto) {
+        texto.style.display = "none";
+    }
+});
 
     } else {
         location.reload(); // o restaurar el texto manualmente
     }
 
 }
+
+
 
 document.getElementById("downloadCustomMosaic").addEventListener("click", async () => {
     const mosaico = document.getElementById("customMosaic");
