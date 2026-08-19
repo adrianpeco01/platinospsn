@@ -1665,104 +1665,135 @@ function coincideBusqueda(game){
         game.querySelector("p").textContent
     );
 
+    // + = OR
     const consultas = textoBusqueda
-    .split(/\s*\+\s*/)
-    .map(t => t.trim())
-    .filter(Boolean);
+        .split(/\s*\+\s*/)
+        .map(t => t.trim())
+        .filter(Boolean);
 
-    return consultas.some(q => {
+    return consultas.some(consulta => {
 
-    // ====================
-    // ENTRE PARÉNTESIS
-    // ====================
+        // --------------------------------
+        // Separar partes:
+        // tetris (2026) → ["tetris", "(2026)"]
+        // --------------------------------
 
-    if(q.startsWith("(") && q.endsWith(")")){
+        const partes = consulta.match(/\([^)]*\)|"[^"]*"|[^()\s]+/g) || [];
 
-        const bruto = q.slice(1,-1).trim();
+        // Sin + = AND
+        return partes.every(parte => {
 
-        // ---- Duración ----
+            parte = parte.trim();
 
-        if(bruto.includes("h")){
+            // ==================================
+            // FILTRO ENTRE PARÉNTESIS
+            // ==================================
 
-            const valor = obtenerDuracion(game);
+            if(parte.startsWith("(") && parte.endsWith(")")){
 
-            if(bruto.startsWith("-"))
-                return valor <= parseDuracion(bruto.slice(1));
+                const bruto = parte.slice(1,-1).trim();
 
-            if(bruto.endsWith("-"))
-                return valor >= parseDuracion(bruto.slice(0,-1));
+                // ----------------
+                // Duración
+                // ----------------
 
-            if(bruto.includes("-")){
-                const [a,b]=bruto.split("-");
-                return valor>=parseDuracion(a)
-                    && valor<=parseDuracion(b);
+                if(bruto.toLowerCase().includes("h")){
+
+                    const valor = obtenerDuracion(game);
+
+                    if(bruto.startsWith("-"))
+                        return valor <= parseDuracion(bruto.slice(1));
+
+                    if(bruto.endsWith("-"))
+                        return valor >= parseDuracion(bruto.slice(0,-1));
+
+                    if(bruto.includes("-")){
+                        const [a,b] = bruto.split("-");
+
+                        return valor >= parseDuracion(a)
+                            && valor <= parseDuracion(b);
+                    }
+
+                    return valor === parseDuracion(bruto);
+                }
+
+                // ----------------
+                // Porcentaje
+                // ----------------
+
+                if(bruto.includes("%")){
+
+                    const valor = obtenerPorcentaje(game);
+
+                    if(bruto.startsWith("-"))
+                        return valor <= parsePorcentaje(bruto.slice(1));
+
+                    if(bruto.endsWith("-"))
+                        return valor >= parsePorcentaje(bruto.slice(0,-1));
+
+                    if(bruto.includes("-")){
+                        const [a,b] = bruto.split("-");
+
+                        return valor >= parsePorcentaje(a)
+                            && valor <= parsePorcentaje(b);
+                    }
+
+                    return valor === parsePorcentaje(bruto);
+                }
+
+                // ----------------
+                // Resto de atributos
+                // ----------------
+
+                let texto = "";
+
+                texto += " " + (
+                    game.querySelector(".plataforma")?.dataset.original || ""
+                );
+
+                texto += " " + (
+                    filtroTipo === "platinum" && game.querySelector(".fechaplat")
+                        ? game.querySelector(".fechaplat").textContent
+                        : game.querySelector(".fecha")?.dataset.original || ""
+                );
+
+                texto += " " + (
+                    filtroTipo === "platinum" && game.querySelector(".duracionplat")
+                        ? game.querySelector(".duracionplat").textContent
+                        : game.querySelector(".duracion")?.dataset.original || ""
+                );
+
+                texto += " " + (
+                    filtroTipo === "platinum" && game.querySelector(".porcentajeplat")
+                        ? game.querySelector(".porcentajeplat").textContent
+                        : game.querySelector(".porcentaje")?.dataset.original || ""
+                );
+
+                return normalizar(texto).includes(
+                    normalizar(bruto)
+                );
             }
 
-            return valor===parseDuracion(bruto);
-        }
+            // ==================================
+            // TÍTULO
+            // ==================================
 
-        // ---- Porcentaje ----
+            if(parte.startsWith('"') && parte.endsWith('"')){
 
-        if(bruto.includes("%")){
+                const exacto = normalizar(
+                    parte.slice(1,-1)
+                );
 
-            const valor = obtenerPorcentaje(game);
-
-            if(bruto.startsWith("-"))
-                return valor<=parsePorcentaje(bruto.slice(1));
-
-            if(bruto.endsWith("-"))
-                return valor>=parsePorcentaje(bruto.slice(0,-1));
-
-            if(bruto.includes("-")){
-                const [a,b]=bruto.split("-");
-                return valor>=parsePorcentaje(a)
-                    && valor<=parsePorcentaje(b);
+                return titulo === exacto;
             }
 
-            return valor===parsePorcentaje(bruto);
-        }
+            return titulo.includes(
+                normalizar(parte)
+            );
 
-        // ---- Plataforma / fecha / etc ----
+        });
 
-        let texto = game.querySelector(".plataforma").dataset.original;
-
-        texto += " ";
-
-        texto += filtroTipo==="platinum" && game.querySelector(".fechaplat")
-            ? game.querySelector(".fechaplat").textContent
-            : game.querySelector(".fecha").dataset.original;
-
-        texto += " ";
-
-        texto += filtroTipo==="platinum" && game.querySelector(".duracionplat")
-            ? game.querySelector(".duracionplat").textContent
-            : game.querySelector(".duracion").dataset.original;
-
-        texto += " ";
-
-        texto += filtroTipo==="platinum" && game.querySelector(".porcentajeplat")
-            ? game.querySelector(".porcentajeplat").textContent
-            : game.querySelector(".porcentaje").dataset.original;
-
-        return normalizar(texto).includes(normalizar(bruto));
-    }
-
-    // ====================
-    // TÍTULO
-    // ====================
-
-// Entre comillas -> nombre exacto
-if(q.startsWith('"') && q.endsWith('"')){
-
-    const exacto = normalizar(q.slice(1,-1));
-
-    return titulo === exacto;
-}
-
-// Sin comillas -> contiene el texto
-return titulo.includes(normalizar(q));
-
-});
+    });
 
 }
 
