@@ -571,6 +571,33 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         margin:0;
     }
 }
+/* Orden de los grupos al estrechar la pantalla */
+#botonAtras {
+    order: -1;
+    flex-shrink: 0;
+}
+
+#grupoBusqueda {
+    order: 0;
+    flex-shrink: 0;
+}
+
+#grupoOrden {
+    order: 1;
+    flex-shrink: 0;
+}
+
+#grupoTipo {
+    order: 2;
+}
+
+#grupoMedio {
+    order: 3;
+}
+
+#grupoAtributo {
+    order: 4;
+}
 
 .ps-logo{
     width:18px;
@@ -666,6 +693,102 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     transform:scale(1.08);
 }
 
+
+/* ===== FILTROS: COLORES FIJOS ===== */
+
+/* Fondo y borde de todos los grupos */
+#grupoBusqueda,
+#grupoOrden,
+#grupoTipo,
+#grupoMedio,
+#grupoAtributo {
+    background-color: #27272a !important;
+    border-color: #2f3033 !important;
+    color: #ffffff !important;
+}
+
+/* Buscador */
+#buscadorJuegos {
+    background-color: transparent !important;
+    color: #ffffff !important;
+}
+
+#buscadorJuegos::placeholder {
+    color: #a1a1aa !important;
+}
+
+/* SVG e iconos: blancos por defecto */
+#filtros button svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+/* Imágenes de iconos: blancas por defecto */
+#filtros button img {
+    filter: brightness(0) invert(1);
+}
+
+/* Hover de botones no seleccionados */
+#filtros button:not(.filtro-activo):hover {
+    background-color: #49494c !important;
+    color: #ffffff !important;
+}
+
+/* Hover de SVG e iconos */
+#filtros button:not(.filtro-activo):hover svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+#filtros button:not(.filtro-activo):hover img {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Botón seleccionado: blanco */
+#filtros button.filtro-activo {
+    background-color: #ffffff !important;
+    color: #27272a !important;
+}
+
+/* Iconos del botón seleccionado: oscuros */
+#filtros button.filtro-activo svg {
+    color: #27272a !important;
+    stroke: #27272a !important;
+}
+
+#filtros button.filtro-activo img {
+    filter: brightness(0) saturate(100%) invert(13%) !important;
+}
+
+/* Hover del botón seleccionado: sigue blanco */
+#filtros button.filtro-activo:hover {
+    background-color: #d1d1d4 !important;
+    color: #27272a !important;
+}
+
+#botonAtras {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 6px;
+    border: 1px solid #2f3033;
+    border-radius: 6px;
+    background-color: #27272a;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+#botonAtras svg {
+    stroke: #ffffff;
+}
+
+#botonAtras:hover {
+    background-color: #49494c;
+}
+
         </style><script src="./next/static/chunks/e3f38668c3bfe7e3.js"></script><script src="./next/static/chunks/57f5e7a5ff60694b.js"></script><script src="./next/static/chunks/658824699b3a95db.js"></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js"></script><script src="./next/static/chunks/e71298d710c650f8.js"></script><script src="./next/static/chunks/575da2acea0996e7.js"></script><script src="./next/static/chunks/c4afd40cfa192c1e.js"></script><meta charset="utf-8"><meta id="viewport-meta" name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="light dark"><title>Trophy Mosaics · adricollantex</title><meta name="description" content="Create and download mosaic images of your PlayStation platinum psn trophies. Enter your PSN ID to visualize, customize, and share your achievements."><meta name="author" content="PSN PlatHub"><meta name="keywords" content="PlayStation trophies,platinum psn trophy,PSN,trophy mosaic,PS5,PS4,PS Vita,PS3,gaming achievements"><meta name="creator" content="PSN PlatHub"><meta name="publisher" content="PSN PlatHub"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"><meta name="category" content="Gaming"><link rel="canonical" href="https://psnplathub.com"><meta property="og:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta property="og:description" content="Generate a beautiful mosaic of your PlayStation platinum psn trophies. No login required."><meta property="og:url" content="https://psnplathub.com"><meta property="og:site_name" content="PSN PlatHub"><meta property="og:image" content="https://psnplathub.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="PSN PlatHub preview image"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta name="twitter:description" content="Create a shareable mosaic of your platinum psn trophies. No login required."><meta name="twitter:image" content="https://psnplathub.com/og.png"><link rel="icon" href="./media/favicon.ico?favicon.f416b654.ico" sizes="256x256" type="image/x-icon"><link rel="icon" href="./media/favicon.ico"><link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png"><link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"><meta name="next-size-adjust" content=""><script src="./next/static/chunks/e3f38668c3bfe7e3.js" async=""></script><script src="./next/static/chunks/57f5e7a5ff60694b.js" async=""></script><script src="./next/static/chunks/658824699b3a95db.js" async=""></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js" async=""></script><script src="./next/static/chunks/e71298d710c650f8.js" async=""></script><script src="./next/static/chunks/575da2acea0996e7.js" async=""></script><script src="./next/static/chunks/c4afd40cfa192c1e.js" async=""></script></head><body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased min-h-svh flex flex-col"><div hidden=""></div><script>((a,b,c,d,e,f,g,h)=>{let i=document.documentElement,j=["light","dark"];function k(b){var c;(Array.isArray(a)?a:[a]).forEach(a=>{let c="class"===a,d=c&&f?e.map(a=>f[a]||a):e;c?(i.classList.remove(...d),i.classList.add(f&&f[b]?f[b]:b)):i.setAttribute(a,b)}),c=b,h&&j.includes(c)&&(i.style.colorScheme=c)}if(d)k(d);else try{let a=localStorage.getItem(b)||c,d=g&&"system"===a?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":a;k(d)}catch(a){}})("class","theme","system",null,["light","dark"],null,true,true)</script><main class="flex-1 min-h-0 flex flex-col"><!--$--><!--/$--><div class="flex flex-col flex-1"><div data-slot="sidebar-wrapper" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar w-full flex-1 min-h-0 flex" style="--sidebar-width: 18rem; --sidebar-width-icon: 3rem;">
             
                     
@@ -673,6 +796,21 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                         
                         <div class="flex flex-col items-center w-full mb-6">
                             <div id="filtros" class="flex items-center gap-4">
+
+<a id="botonAtras" href="https://adrianpeco01.github.io/videojuegoscompletados">
+    <svg xmlns="http://www.w3.org/2000/svg"
+     width="20" height="20"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.8"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     aria-hidden="true">
+    <path d="M19 12H5"/>
+    <path d="m12 19-7-7 7-7"/>
+</svg>
+</a>
 
                             <div id="grupoBusqueda" class="inline-flex items-center p-1 bg-muted rounded-lg border border-border">
 
@@ -696,9 +834,9 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                             </div>
 
                                 <div id="grupoOrden" class="inline-flex p-1 bg-muted rounded-lg border border-border">
+                                <button id="Nuevo" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/New.svg"alt="Nuevo" class="w-2 h-2 ps-logo"><span>Recientes</span></button>
                                 <button id="AZ" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all
                                 hover:bg-accent hover:text-accent-foreground rounded-md px-3 gap-2 h-8"><img src="./media/AZ.svg"alt="AZ" class="w-4 h-4 ps-logo"><span>A-Z</span></button>
-                                <button id="Nuevo" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/New.svg"alt="Nuevo" class="w-2 h-2 ps-logo"><span>Recientes</span></button>
                                 <button id="Tiempo" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/tiempo.svg"alt="Tiempo" class="w-4 h-4 ps-logo"><span>Largos</span></button>
                                 <button id="Raros" data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 rounded-md px-3 has-[&gt;svg]:px-2.5 gap-2 h-8"><img src="./media/raro.svg"alt="Raros" class="w-4 h-4 ps-logo"><span>Raros</span></button></div>
 
@@ -1394,7 +1532,7 @@ function activarMedio(btn){
 activarTipo(btnTodo);
 activarMedio(btnTodoMEDIO);
 
-let ordenActual = "az";
+let ordenActual = "nuevo";
 let ordenInverso = false;
 
 const btnAZ = document.getElementById("AZ");
@@ -2159,7 +2297,7 @@ buscador.addEventListener("input", () => {
     actualizarContadores();
 });
 
-activarOrden(btnAZ);
+activarOrden(btnNuevo);
 
 actualizarDatos();
 pintarBotones();
