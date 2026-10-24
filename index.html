@@ -641,9 +641,11 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     height: 42px;
 }
 
-#grupoBusqueda input{
-    width: 100%;
-    color:white;
+#grupoBusqueda input {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    color: white;
 }
 
 #grupoBusqueda input::placeholder{
@@ -789,6 +791,75 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     background-color: #49494c;
 }
 
+
+/* Icono de información: color fijo, sin efecto hover */
+#searchInfoButton svg,
+#searchInfoButton:hover svg,
+#searchInfoButton:focus svg,
+#searchInfoButton:focus-visible svg {
+    color: #434447 !important;
+    stroke: none !important;
+    opacity: 1 !important;
+}
+
+
+/* Botón de información: tamaño fijo y sin encogerse */
+#grupoBusqueda #searchInfoButton {
+    width: 20px !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    min-height: 20px !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    flex: 0 0 24px !important;
+}
+
+/* SVG del botón de información */
+#grupoBusqueda #searchInfoButton svg {
+    display: block;
+    width: 14px !important;
+    min-width: 14px !important;
+    height: 14px !important;
+    min-height: 14px !important;
+    flex: 0 0 14px !important;
+    color: #434447 !important;
+    stroke: none;
+    opacity: 1 !important;
+}
+
+/* Mantener el icono igual al pasar el ratón o enfocar */
+#grupoBusqueda #searchInfoButton:hover,
+#grupoBusqueda #searchInfoButton:focus,
+#grupoBusqueda #searchInfoButton:focus-visible {
+    background-color: transparent !important;
+}
+
+#grupoBusqueda #searchInfoButton:hover svg,
+#grupoBusqueda #searchInfoButton:focus svg,
+#grupoBusqueda #searchInfoButton:focus-visible svg {
+    color: #2f3033 !important;
+    stroke: none !important;
+    opacity: 1 !important;
+}
+
+#dynamicTooltipContent {
+    background-color: #f8fafc !important;
+}
+
+#filtros #grupoBusqueda #searchInfoButton svg {
+    color: #434447 !important;
+    stroke: none !important;
+}
+
+#filtros #grupoBusqueda #searchInfoButton svg circle {
+    stroke: currentColor !important;
+}
+
+#filtros #grupoBusqueda #searchInfoButton svg path {
+    fill: currentColor !important;
+    stroke: none !important;
+}
+
         </style><script src="./next/static/chunks/e3f38668c3bfe7e3.js"></script><script src="./next/static/chunks/57f5e7a5ff60694b.js"></script><script src="./next/static/chunks/658824699b3a95db.js"></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js"></script><script src="./next/static/chunks/e71298d710c650f8.js"></script><script src="./next/static/chunks/575da2acea0996e7.js"></script><script src="./next/static/chunks/c4afd40cfa192c1e.js"></script><meta charset="utf-8"><meta id="viewport-meta" name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0a0a"><meta name="color-scheme" content="light dark"><title>Trophy Mosaics · adricollantex</title><meta name="description" content="Create and download mosaic images of your PlayStation platinum psn trophies. Enter your PSN ID to visualize, customize, and share your achievements."><meta name="author" content="PSN PlatHub"><meta name="keywords" content="PlayStation trophies,platinum psn trophy,PSN,trophy mosaic,PS5,PS4,PS Vita,PS3,gaming achievements"><meta name="creator" content="PSN PlatHub"><meta name="publisher" content="PSN PlatHub"><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"><meta name="category" content="Gaming"><link rel="canonical" href="https://psnplathub.com"><meta property="og:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta property="og:description" content="Generate a beautiful mosaic of your PlayStation platinum psn trophies. No login required."><meta property="og:url" content="https://psnplathub.com"><meta property="og:site_name" content="PSN PlatHub"><meta property="og:image" content="https://psnplathub.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="PSN PlatHub preview image"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics"><meta name="twitter:description" content="Create a shareable mosaic of your platinum psn trophies. No login required."><meta name="twitter:image" content="https://psnplathub.com/og.png"><link rel="icon" href="./media/favicon.ico?favicon.f416b654.ico" sizes="256x256" type="image/x-icon"><link rel="icon" href="./media/favicon.ico"><link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png"><link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"><meta name="next-size-adjust" content=""><script src="./next/static/chunks/e3f38668c3bfe7e3.js" async=""></script><script src="./next/static/chunks/57f5e7a5ff60694b.js" async=""></script><script src="./next/static/chunks/658824699b3a95db.js" async=""></script><script src="./next/static/chunks/dfa6e4b9ec1efe82.js" async=""></script><script src="./next/static/chunks/e71298d710c650f8.js" async=""></script><script src="./next/static/chunks/575da2acea0996e7.js" async=""></script><script src="./next/static/chunks/c4afd40cfa192c1e.js" async=""></script></head><body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased min-h-svh flex flex-col"><div hidden=""></div><script>((a,b,c,d,e,f,g,h)=>{let i=document.documentElement,j=["light","dark"];function k(b){var c;(Array.isArray(a)?a:[a]).forEach(a=>{let c="class"===a,d=c&&f?e.map(a=>f[a]||a):e;c?(i.classList.remove(...d),i.classList.add(f&&f[b]?f[b]:b)):i.setAttribute(a,b)}),c=b,h&&j.includes(c)&&(i.style.colorScheme=c)}if(d)k(d);else try{let a=localStorage.getItem(b)||c,d=g&&"system"===a?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":a;k(d)}catch(a){}})("class","theme","system",null,["light","dark"],null,true,true)</script><main class="flex-1 min-h-0 flex flex-col"><!--$--><!--/$--><div class="flex flex-col flex-1"><div data-slot="sidebar-wrapper" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar w-full flex-1 min-h-0 flex" style="--sidebar-width: 18rem; --sidebar-width-icon: 3rem;">
             
                     
@@ -830,6 +901,71 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                                     placeholder="Buscar..."
                                     class="bg-transparent outline-none px-3 py-1 text-sm placeholder:text-zinc-500"
                                 >
+
+
+<button
+    id="searchInfoButton"
+    type="button"
+    class="info-button-trigger ml-1 flex h-5 w-5 shrink-0 cursor-pointer items-center justify-center"
+    data-state="closed"
+    data-tooltip-message="'( )' Atributo
+    '+' Alternativa (OR)
+'-' Rango numérico
+&quot; &quot; Término exacto"
+    aria-label="Información sobre la búsqueda">
+    
+<svg
+    width="14"
+    height="14"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+>
+    <!-- Círculo exterior corregido -->
+    <circle
+        cx="8"
+        cy="8"
+        r="6.1"
+        stroke="currentColor"
+        stroke-width="1.3"
+    />
+
+    <!-- La i original, ajustada al nuevo tamaño -->
+    <path
+        d="M8.8 4.8
+           C8.8 5.24 8.44 5.6 8 5.6
+           C7.56 5.6 7.2 5.24 7.2 4.8
+           C7.2 4.36 7.56 4 8 4
+           C8.44 4 8.8 4.36 8.8 4.8
+           Z
+           M6.4 6.4
+           H6.93
+           H8
+           C8.3 6.4 8.53 6.64 8.53 6.93
+           V10.67
+           H9.07
+           H9.6
+           V11.47
+           H9.07
+           H8
+           H6.93
+           H6.4
+           V10.67
+           H6.93
+           H7.47
+           V7.47
+           H6.93
+           H6.4
+           Z"
+        fill="currentColor"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+    />
+</svg>
+
+</button>
+
 
                             </div>
 
@@ -1485,6 +1621,21 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
                 d.getElementsByTagName("head")[0].appendChild(s);
               })();
             </script><script src="./next/static/chunks/c12ff0d6a04b1697.js" id="_R_" async=""></script><script>(self._next_f=self._next_f||[]).push([0])</script><script>self._next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[427423,[\"./next/static/chunks/e306411b23237050.js\",\"./next/static/chunks/1322de6211aaa390.js\"],\"ThemeProvider\"]\n3:I[339756,[\"./next/static/chunks/d96012bcfc98706a.js\",\"./next/static/chunks/c051ed1a893bf76e.js\"],\"default\"]\n4:I[837457,[\"./next/static/chunks/d96012bcfc98706a.js\",\"./next/static/chunks/c051ed1a893bf76e.js\"],\"default\"]\n5:I[347331,[\"./next/static/chunks/e306411b23237050.js\",\"./next/static/chunks/1322de6211aaa390.js\"],\"default\"]\n6:I[900752,[\"./next/static/chunks/e306411b23237050.js\",\"./next/static/chunks/1322de6211aaa390.js\"],\"default\"]\n7:I[347257,[\"./next/static/chunks/d96012bcfc98706a.js\",\"./next/static/chunks/c051ed1a893bf76e.js\"],\"ClientPageRoot\"]\n8:I[952683,[\"./next/static/chunks/e306411b23237050.js\",\"./next/static/chunks/1322de6211aaa390.js\",\"./next/static/chunks/e4d0950ae379c280.js\",\"./next/static/chunks/f96b54d823dd81a1.js\"],\"default\"]\nb:I[897367,[\"./next/static/chunks/d96012bcfc98706a.js\",\"./next/static/chunks/c051ed1a893bf76e.js\"],\"OutletBoundary\"]\nc:\"$Sreact.suspense\"\ne:I[897367,[\"./next/static/chunks/d96012bcfc98706a.js\",\"./next/static/chunks/c051ed1a893bf76e.js\"],\"ViewportBoundary\"]\n10:I[897367,[\"./next/static/chunks/d96012bcfc98706a.js\",\"./next/static/chunks/c051ed1a893bf76e.js\"],\"MetadataBoundary\"]\n12:I[168027,[],\"default\"]\n:HL[\"./next/static/chunks/4834282745b36b80.css\",\"style\"]\n:HL[\"./next/static/media/797e433ab948586e-s.p.479bea2b.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"./next/static/media/caa3a2e1cccd8315-s.p.3b6cae6d.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n"])</script><script>self._next_f.push([1,"0:{\"P\":null,\"b\":\"LgLYN9KnG8yEsY5Ae6OGH\",\"c\":[\"\",\"\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"./next/static/chunks/4834282745b36b80.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"./next/static/chunks/e306411b23237050.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"./next/static/chunks/1322de6211aaa390.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"suppressHydrationWarning\":true,\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"script\",null,{\"type\":\"application/ld+json\",\"dangerouslySetInnerHTML\":{\"__html\":\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"WebSite\\\",\\\"name\\\":\\\"PSN PlatHub\\\",\\\"url\\\":\\\"https://psnplathub.com/\\\",\\\"description\\\":\\\"Generate and download a shareable mosaic of your PlayStation platinum psn trophies.\\\"}\"}}]}],[\"$\",\"body\",null,{\"className\":\"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased min-h-svh flex flex-col\",\"children\":[\"$\",\"$L2\",null,{\"attribute\":\"class\",\"defaultTheme\":\"system\",\"enableSystem\":true,\"children\":[[\"$\",\"main\",null,{\"className\":\"flex-1 min-h-0 flex flex-col\",\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}],[\"$\",\"$L5\",null,{}],[\"$\",\"$L6\",null,{}],[\"$\",\"script\",null,{\"type\":\"text/javascript\",\"dangerouslySetInnerHTML\":{\"__html\":\"\\n              window.$sleek=[];\\n              window.SLEEK_PRODUCT_ID=387737643;\\n              (function(){\\n                var d=document,s=d.createElement(\\\"script\\\");\\n                s.src=\\\"https://client.sleekplan.com/sdk/e.js\\\";\\n                s.async=1;\\n                d.getElementsByTagName(\\\"head\\\")[0].appendChild(s);\\n              })();\\n            \"}}]]}]}]]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L7\",null,{\"Component\":\"$8\",\"serverProvidedParams\":{\"searchParams\":{},\"params\":{},\"promises\":[\"$@9\",\"$@a\"]}}],[[\"$\",\"script\",\"script-0\",{\"src\":\"./next/static/chunks/e4d0950ae379c280.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"./next/static/chunks/f96b54d823dd81a1.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$Lb\",null,{\"children\":[\"$\",\"$c\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@d\"}]}]]}],{},null,false,false]},null,false,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$Le\",null,{\"children\":\"$Lf\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L10\",null,{\"children\":[\"$\",\"$c\",null,{\"name\":\"Next.Metadata\",\"children\":\"$L11\"}]}]}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$12\",[]],\"S\":true}\n"])</script><script>self._next_f.push([1,"9:{}\na:\"$0:f:0:1:1:children:0:props:children:0:props:serverProvidedParams:params\"\n"])</script><script>self._next_f.push([1,"f:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"2\",{\"name\":\"theme-color\",\"content\":\"#0a0a0a\"}],[\"$\",\"meta\",\"3\",{\"name\":\"color-scheme\",\"content\":\"light dark\"}]]\n"])</script><script>self._next_f.push([1,"13:I[27201,[\"./next/static/chunks/d96012bcfc98706a.js\",\"./next/static/chunks/c051ed1a893bf76e.js\"],\"IconMark\"]\nd:null\n"])</script><script>self._next_f.push([1,"11:[[\"$\",\"title\",\"0\",{\"children\":\"PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Create and download mosaic images of your PlayStation platinum psn trophies. Enter your PSN ID to visualize, customize, and share your achievements.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"author\",\"content\":\"PSN PlatHub\"}],[\"$\",\"meta\",\"3\",{\"name\":\"keywords\",\"content\":\"PlayStation trophies,platinum psn trophy,PSN,trophy mosaic,PS5,PS4,PS Vita,PS3,gaming achievements\"}],[\"$\",\"meta\",\"4\",{\"name\":\"creator\",\"content\":\"PSN PlatHub\"}],[\"$\",\"meta\",\"5\",{\"name\":\"publisher\",\"content\":\"PSN PlatHub\"}],[\"$\",\"meta\",\"6\",{\"name\":\"robots\",\"content\":\"index, follow\"}],[\"$\",\"meta\",\"7\",{\"name\":\"googlebot\",\"content\":\"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1\"}],[\"$\",\"meta\",\"8\",{\"name\":\"category\",\"content\":\"Gaming\"}],[\"$\",\"link\",\"9\",{\"rel\":\"canonical\",\"href\":\"https://psnplathub.com\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:title\",\"content\":\"PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:description\",\"content\":\"Generate a beautiful mosaic of your PlayStation platinum psn trophies. No login required.\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:url\",\"content\":\"https://psnplathub.com\"}],[\"$\",\"meta\",\"13\",{\"property\":\"og:site_name\",\"content\":\"PSN PlatHub\"}],[\"$\",\"meta\",\"14\",{\"property\":\"og:image\",\"content\":\"https://psnplathub.com/og.png\"}],[\"$\",\"meta\",\"15\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"16\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"17\",{\"property\":\"og:image:alt\",\"content\":\"PSN PlatHub preview image\"}],[\"$\",\"meta\",\"18\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"19\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"20\",{\"name\":\"twitter:title\",\"content\":\"PSN PlatHub – Generate PlayStation platinum psn Trophy Mosaics\"}],[\"$\",\"meta\",\"21\",{\"name\":\"twitter:description\",\"content\":\"Create a shareable mosaic of your platinum psn trophies. No login required.\"}],[\"$\",\"meta\",\"22\",{\"name\":\"twitter:image\",\"content\":\"https://psnplathub.com/og.png\"}],[\"$\",\"link\",\"23\",{\"rel\":\"icon\",\"href\":\"/favicon.ico?favicon.f416b654.ico\",\"sizes\":\"256x256\",\"type\":\"image/x-icon\"}],[\"$\",\"link\",\"24\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\"}],[\"$\",\"link\",\"25\",{\"rel\":\"icon\",\"href\":\"/icon-192.png\",\"sizes\":\"192x192\",\"type\":\"image/png\"}],[\"$\",\"link\",\"26\",{\"rel\":\"icon\",\"href\":\"/icon-512.png\",\"sizes\":\"512x512\",\"type\":\"image/png\"}],[\"$\",\"link\",\"27\",{\"rel\":\"apple-touch-icon\",\"href\":\"/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"$L13\",\"28\",{}]]\n"])</script>
+
+
+<div
+    id="dynamicTooltipWrapper"
+    style="position: fixed; left: 0; top: 0; min-width: max-content; max-width: calc(100vw - 16px); z-index: 999999; display: none;">
+    <div
+        id="dynamicTooltipContent"
+        data-side="bottom"
+        data-align="center"
+        data-state="closed"
+        class="bg-primary text-primary-foreground animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=top]:slide-in-from-bottom-2 z-50 overflow-hidden rounded-md px-3 py-1.5 text-xs mb-[4px]">
+        <p id="tooltipMessageText" class="inline-block"></p>
+    </div>
+</div>
+
 <script>
 
 const grid = document.querySelector("#customMosaic .w-full.px-4.pb-4");
@@ -2473,9 +2624,213 @@ document.getElementById("downloadCustomMosaic").addEventListener("click", async 
         alert("Error al exportar en alta calidad: " + err.message);
     }
 });
+
+
+
 </script><next-route-announcer style="position: absolute;"></next-route-announcer><div id="sleek-button" class="i-sl-button right-bottom">
                 <div class="i-sl-button-inner compact icon-icon">
                     <div class="i-sl-button-btn active" id="sleek-button-btn">
                         <div class="i-sl-button-logo">
-                        
+              
+                            
+<script>
+(() => {
+    const infoButtons = document.querySelectorAll('.info-button-trigger');
+    const dynamicTooltipWrapper = document.getElementById('dynamicTooltipWrapper');
+    const tooltipMessageText = document.getElementById('tooltipMessageText');
+    const dynamicTooltipContent = document.getElementById('dynamicTooltipContent');
+
+    if (
+        !infoButtons.length ||
+        !dynamicTooltipWrapper ||
+        !tooltipMessageText ||
+        !dynamicTooltipContent
+    ) {
+        console.error("Error: Elementos del tooltip no encontrados.");
+        return;
+    }
+
+    let showTimeout;
+    let hideTimeout;
+    let activeButton = null;
+
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    infoButtons.forEach(button => {
+        if (isMobile()) {
+            button.addEventListener('click', event => {
+                event.stopPropagation();
+
+                const alreadyOpen =
+                    dynamicTooltipWrapper.style.display === 'block' &&
+                    activeButton === button;
+
+                if (alreadyOpen) {
+                    forceTooltipClose();
+                } else {
+                    handleTooltipOpen(button);
+                }
+            });
+        } else {
+            button.addEventListener('mouseenter', () => {
+                handleTooltipOpen(button);
+            });
+
+            button.addEventListener('mouseleave', handleTooltipClose);
+        }
+    });
+
+    // Permite mover el ratón desde el botón hasta el tooltip
+    dynamicTooltipWrapper.addEventListener('mouseenter', () => {
+        clearTimeout(hideTimeout);
+    });
+
+    dynamicTooltipWrapper.addEventListener('mouseleave', () => {
+        if (!isMobile()) {
+            handleTooltipClose();
+        }
+    });
+
+    // Cerrar al pulsar fuera en móviles
+    document.addEventListener('click', event => {
+        if (
+            !isMobile() ||
+            !activeButton ||
+            dynamicTooltipWrapper.style.display !== 'block'
+        ) {
+            return;
+        }
+
+        if (
+            !activeButton.contains(event.target) &&
+            !dynamicTooltipWrapper.contains(event.target)
+        ) {
+            forceTooltipClose();
+        }
+    });
+
+    // Cerrar al desplazarse en móviles
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const scrollDelta = Math.abs(window.scrollY - lastScrollY);
+
+        if (
+            isMobile() &&
+            scrollDelta > 8 &&
+            dynamicTooltipWrapper.style.display === 'block'
+        ) {
+            forceTooltipClose();
+        }
+
+        lastScrollY = window.scrollY;
+    }, { passive: true });
+
+    function handleTooltipOpen(button) {
+        clearTimeout(hideTimeout);
+        clearTimeout(showTimeout);
+
+        const message = button.dataset.tooltipMessage;
+
+        if (message) {
+            tooltipMessageText.textContent = message;
+
+            if (button.id === 'searchInfoButton') {
+                tooltipMessageText.style.whiteSpace = 'pre-line';
+                tooltipMessageText.style.textAlign = 'left';
+            } else {
+                tooltipMessageText.style.whiteSpace = '';
+                tooltipMessageText.style.textAlign = '';
+            }
+        }
+
+        if (activeButton && activeButton !== button) {
+            activeButton.setAttribute('data-state', 'closed');
+            activeButton.removeAttribute('aria-describedby');
+        }
+
+        showTimeout = setTimeout(() => {
+            dynamicTooltipContent.setAttribute('data-state', 'open');
+            dynamicTooltipWrapper.style.display = 'block';
+
+            const buttonRect = button.getBoundingClientRect();
+            const tooltipRect = dynamicTooltipContent.getBoundingClientRect();
+            const margin = 8;
+            const isSearchTooltip = button.id === 'searchInfoButton';
+
+            let topPos;
+            let leftPos =
+                buttonRect.left +
+                buttonRect.width / 2 -
+                tooltipRect.width / 2;
+
+            if (isSearchTooltip) {
+                topPos = buttonRect.bottom + margin;
+                dynamicTooltipContent.setAttribute('data-side', 'bottom');
+            } else {
+                topPos = buttonRect.top - tooltipRect.height - margin;
+
+                if (topPos < 8) {
+                    topPos = buttonRect.bottom + margin;
+                    dynamicTooltipContent.setAttribute('data-side', 'bottom');
+                } else {
+                    dynamicTooltipContent.setAttribute('data-side', 'top');
+                }
+            }
+
+            leftPos = Math.max(
+                8,
+                Math.min(leftPos, window.innerWidth - tooltipRect.width - 8)
+            );
+
+            dynamicTooltipContent.setAttribute(
+                'data-align',
+                leftPos === 8 ? 'start' :
+                leftPos + tooltipRect.width >= window.innerWidth - 8
+                    ? 'end' : 'center'
+            );
+
+            dynamicTooltipWrapper.style.top = `${topPos}px`;
+            dynamicTooltipWrapper.style.left = `${leftPos}px`;
+            dynamicTooltipWrapper.style.transform = 'none';
+
+            button.setAttribute('data-state', 'delayed-open');
+            button.setAttribute('aria-describedby', 'dynamicTooltipContent');
+            activeButton = button;
+        }, 50);
+    }
+
+    function handleTooltipClose() {
+    clearTimeout(showTimeout);
+    clearTimeout(hideTimeout);
+
+    hideTimeout = setTimeout(() => {
+        forceTooltipClose();
+    }, 100);
+}
+
+ function forceTooltipClose() {
+    clearTimeout(showTimeout);
+    clearTimeout(hideTimeout);
+
+    dynamicTooltipContent.setAttribute('data-state', 'closed');
+
+    if (activeButton) {
+        activeButton.setAttribute('data-state', 'closed');
+        activeButton.removeAttribute('aria-describedby');
+        activeButton = null;
+    }
+
+    // Ocultar el contenedor después del fade out
+    setTimeout(() => {
+        if (dynamicTooltipContent.getAttribute('data-state') === 'closed') {
+            dynamicTooltipWrapper.style.display = 'none';
+        }
+    }, 120);
+}
+})();
+</script>
+
         </body></html>
